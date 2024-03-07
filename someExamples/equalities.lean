@@ -120,7 +120,7 @@ calc
   _ = 1 := by norm_num
   _ ≤ 2 := by norm_num
 
-example {u v x y A B: ℝ} {h1: 0<A} {h2: A ≤ 1} {h3: B ≥ 1} {h4: x ≤ B} {h5: y ≤ B} {h6: 0 ≤ u} {h7: u ≤ A} {h8: 0 ≤ v} {h9: v < A} : u*y + v*x + u*v < 3 * A * B :=
+example {u v x y A B: ℝ} {h2: A ≤ 1} {h3: B ≥ 1} {h4: x ≤ B} {h5: y ≤ B} {h6: 0 ≤ u} {h7: u ≤ A} {h8: 0 ≤ v} {h9: v < A} : u*y + v*x + u*v < 3 * A * B :=
 calc
   u * y + v * x + u * v ≤ u * B + v * B + u * v := by rel[h5, h4]
     _ ≤ A * B + A * B + A * v := by rel[h7, h9]
